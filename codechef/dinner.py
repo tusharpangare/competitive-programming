@@ -20,7 +20,8 @@ Output:
 3
 1
 -1'''
-'''
+
+
 for _ in range(int(input())):
     n,k=map(int,input().split())
     category=list(map(int, input().split()[:n]))
@@ -39,14 +40,17 @@ for _ in range(int(input())):
         print("-1")     
     else:
         dict_val=sorted(dict.values())
-        print(sum(dict_val[:k]))'''
+        print(sum(dict_val[:k]))
 
 
-for _ in range(int(input())):
+'''for _ in range(int(input())):
     n,k=map(int,input().split())
     category=list(map(int, input().split()[:n]))
     time=list(map(int, input().split()[:n]))
     
-    time_sorted=sorted(set(time[:k]))
-    print(sum(time_sorted))
+    time_sorted=sorted(set(time))
+    if (len(set(category)))<k:
+        print("-1")
+    else:
+        print(sum(time_sorted[:k]))'''
 
